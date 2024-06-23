@@ -1,6 +1,6 @@
 .homealign {
   display: flex;
-  border: solid 2px red;
+  /* border: solid 2px red; */
   justify-content: space-around;
 }
 
@@ -8,14 +8,14 @@
 
 .mainproductbox {
   width: 80%;
-  border: solid 2px black;
+  /* border: solid 2px black; */
 }
 
 /* ------------------------- */
 
 .boxmain{
     display: flex;
-    border: solid 2px green;
+    /* border: solid 2px green; */
     flex-basis: 25%;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -26,11 +26,11 @@
     height: 300px;
     width: 25%;
    text-align: center;
-    border: solid 2px red;
+    border: solid 2px rgb(183, 182, 182);
 }
 
 .categorybox {
-  border: solid 2px black;
+  border: solid 2px rgb(238, 238, 238);
   width: 20%;
 }
 

@@ -1,0 +1,16 @@
+.demobox{
+    display: flex;
+    /* border: solid 2px green; */
+    flex-basis: 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.demobox>div{
+    height: 200px;
+    width: 20%;
+    border:solid 0.5px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
