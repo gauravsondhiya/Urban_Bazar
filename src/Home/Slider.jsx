@@ -17,13 +17,13 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const nextSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  // const nextSlide = () => {
+  //   setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  // };
 
-  const prevSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+  // const prevSlide = () => {
+  //   setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  // };
 
   return (
     <div className="slider">
