@@ -1,19 +1,21 @@
 import React from "react";
 import "./Header.css";
+import {Link } from "react-router-dom"
 const Header = () => {
   return (
     <div className="main">
       <div className="first">
-        <div>Shopping App</div>
+         <Link to="/">Urban Bazaar</Link>
       </div>
       <div className="searchbar">
         <input placeholder="What are you looking for?" />
         {/* <button></button> */}
       </div>
       <div className="second">
-        <div>Home</div>
-        <div>Cart</div>
-        <div>Signup/Login</div>
+        <Link to="">Home</Link>
+        <Link to="/Cart">Cart</Link>
+        <Link to="/Signup">Signup</Link>
+
       </div>
     </div>
   );

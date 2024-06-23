@@ -1,11 +1,14 @@
 .main{
     display: flex;
     border:solid 1px red;
-    justify-content:space-around
+    justify-content:space-around;
+    padding:15px;
+    text-decoration: none;
 }
 
 .second{
     display: flex;
-   border:solid 1px black;
+    /* border:solid 1px black; */
     gap: 20px;
+
 }

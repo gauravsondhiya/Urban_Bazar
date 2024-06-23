@@ -44,3 +44,11 @@ img {
   height: 60%;
   width: 100%;
 }
+
+.slider{
+ height: 200px;
+ border:solid 2px rgb(176, 172, 172);
+}
+.slider >img{
+  height: 100%;
+}

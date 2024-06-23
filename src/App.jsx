@@ -2,20 +2,25 @@ import React from "react";
 import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
-import Shimmer from "./Shimmer/Shimmer";
 import Infopage from "./Home/Infopage";
+import Signup from "./auth/Signup";
+import Login from "./auth/Login";
+import Cart from "./Cart/Cart";
+import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
-    <div>
-          <Infopage/>
-      <Header />
-      <br />
-  
-      <Home />
-      <br />
-      <Footer />
-    
-    </div>
+  <>
+  <Header/>
+  <br/>
+    <Routes>
+         <Route path='' element={<Home/>}/>
+         <Route path='Cart' element={<Cart/>}/>
+         <Route path='Signup' element={<Signup/>}/>
+    </Routes>
+    <br/>
+    <Footer/>
+    </>
+   
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Shimmer from "../Shimmer/Shimmer";
 import Infopage from "./Infopage";
+import Slider from "./Slider";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -50,6 +51,8 @@ const Home = () => {
     <Shimmer />
   ) : (
     <>
+    <Slider/>
+    <br/>
       <div className="homealign">
         <div className="mainproductbox">
           <div className="boxmain">

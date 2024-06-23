@@ -33,7 +33,7 @@ const Footer = () => {
           <ul>
             <li>Timings:10AM-7PM(Mon-Sat)</li>
             <li>Whatsapp:+987654321</li>
-            <li>Instagram:@shopping.co.in</li>
+            <li>Instagram:Urban_Bazaar</li>
           </ul>
         </div>
       </div>
