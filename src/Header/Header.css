@@ -1,6 +1,6 @@
 .main{
     display: flex;
-    border:solid 1px red;
+    border:solid 1px rgb(150, 149, 149);
     justify-content:space-around;
     padding:15px;
     text-decoration: none;

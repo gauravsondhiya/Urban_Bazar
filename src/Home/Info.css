@@ -1,0 +1,14 @@
+.maininfobox{
+  border:solid 1px red;
+  display: flex;
+  height: 600px;
+}
+
+.maininfobox1{
+    width: 40%;
+border:solid 2px black
+}
+.maininfobox2{
+    width: 60%;
+    border:solid 2px black
+}
