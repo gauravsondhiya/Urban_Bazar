@@ -12,17 +12,19 @@ import { addItem } from "../../Cart/CartSlice";
 
 const Home = () => {
   const dispatch = useDispatch()
+ 
   const { dataget, setdataget } = useContext(DataContext) || [];
 
   const { cartdata, setcartdata } = useContext(CartDataContext) || [];
 
   const navigate = useNavigate();
 
-  const cart = useSelector((store) => store.cart.items);
+  
   let handleAddToCart = (value) => {
     // setcartdata(value);
     // navigate("/Info/:id/:title");
     dispatch(addItem(value) )
+   
   };
 
   Fetch();
