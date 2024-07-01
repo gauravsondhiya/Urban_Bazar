@@ -5,6 +5,7 @@ const DataContextProvider = ({children}) => {
 
 const [dataget ,setdataget] = useState([])
 
+
   return (
     <DataContext.Provider value={{dataget,setdataget}}>
       {children}

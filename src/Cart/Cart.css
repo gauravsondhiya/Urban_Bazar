@@ -1,0 +1,86 @@
+.cartmainbox {
+  /* border: solid 2px black; */
+  display: flex;
+}
+
+.cartbox1 {
+  width: 70%;
+  /* border: solid 2px red; */
+}
+
+
+.carta {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  align-items: center;
+  border: solid 2px rgb(175, 172, 172);
+}
+
+.cartboxb{
+    /* border: solid 2px yellow; */
+}
+
+.cartvalues {
+  border: solid 1px rgb(182, 177, 177);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.cartvalues > .titlevalue {
+  width: 30%;
+  height: 50px;
+  /* border: solid 1px green; */
+  word-wrap: break-word;
+  
+}
+
+.cartvalues > button {
+  height: 30px;
+  width: 50px;
+}
+
+.cartvaluesimg {
+  height: 60px;
+  width: 60px;
+}
+
+
+.cartbox2 {
+    width: 30%;
+    margin: 10px;
+    /* height: 200px; */
+    border: solid 2px rgb(161, 164, 161);
+    text-align: center;
+  }
+  .cartbox2>button{
+    max-width: 90px;
+    margin: 10px;
+  }
+
+  .thnksboxmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .thnksbox{
+    /* border:solid 2px red; */
+    height: 300px;
+    width: 500px;
+    text-align: center;
+  }
+  .thnksbutton{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 50px;
+    /* border:solid 2px red; */
+  }
+
+  .lastbutton{
+    max-width: 120px;
+  }

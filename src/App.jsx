@@ -7,7 +7,7 @@ import Infopage from "./Home/Infopage";
 import Signup from "./auth/Signup";
 import Login from "./auth/Login";
 import Cart from "./Cart/Cart";
-
+import Thankyou from "./Cart/Thankyou";
 const App = () => {
   return (
     <>
@@ -17,6 +17,8 @@ const App = () => {
         <Route path='' element={<Home />} />
         <Route path='Info/:id/:title' element={<Infopage />} />
         <Route path='Cart' element={<Cart />} />
+        <Route path='/Thankyou' element={<Thankyou />} />
+    
         <Route path='Signup' element={<Signup />} />
         <Route path='Login' element={<Login />} />
       </Routes>

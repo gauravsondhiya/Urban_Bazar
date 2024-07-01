@@ -11,40 +11,43 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../Cart/CartSlice";
 
 const Home = () => {
-  const dispatch = useDispatch()
- 
-  const { dataget, setdataget } = useContext(DataContext) || [];
-
-  const { cartdata, setcartdata } = useContext(CartDataContext) || [];
-
+  const dispatch = useDispatch();
+  const { dataget } = useContext(DataContext) || [];
+  const [passingData, setPassingData] = useState([]);
   const navigate = useNavigate();
 
-  
+  useEffect(() => {
+    if (dataget.length) {
+      setPassingData(dataget);
+    }
+  }, [dataget]);
+
   let handleAddToCart = (value) => {
-    // setcartdata(value);
-    // navigate("/Info/:id/:title");
-    dispatch(addItem(value) )
-   
+    dispatch(addItem(value));
+  };
+
+  let filterByCategory = (value) => {
+    if (value === "all") {
+      setPassingData(dataget);
+    } else {
+      const filteredData = dataget.filter((e) => e.category === value);
+      setPassingData(filteredData);
+    }
   };
 
   Fetch();
-  return (
+
+  return (dataget.length=="")?<Shimmer /> :(
     <>
       <Slider />
       <br />
       <div className="homealign">
         <div className="mainproductbox">
           <div className="boxmain">
-            {dataget.map((item) => (
+            {passingData.map((item) => (
               <div key={item.id} className="box">
                 <Link to={`/Info/${item.id}/${item.title}`}>
                   <img src={item.images[0]} alt="product" />
-                  {/* {item.images.map((e)=>(
-                    
-                        <img src={e} alt="product" />
-                      
-                    ))} */}
-
                   <h1>{`${item.title} ${item.id}`}</h1>
                   <p>{item.price}</p>
                 </Link>
