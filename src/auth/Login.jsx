@@ -38,25 +38,25 @@ const Login = () => {
 
   return (
     <>
-      <div className="signupbox">
-        <form className="inputboxes" onSubmit={loginClick}>
-          <h2>Login</h2>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          <input 
+      <div className=" h-[400px] flex  justify-center ">
+        <form className="flex flex-col border w-[40%]  border-box border-black text-2xl font-semibold rounded-md " onSubmit={loginClick}>
+          <h2 className="text-5xl text-center font-bold underline underline-offset">Login</h2>
+          {error && <p className="text-center m-3"  style={{ color: "red" }}>{error}</p>}
+          <input  className=" border border-box border-black text-center m-3 rounded-md"
             placeholder="Email" 
             type="email" 
             onChange={inputChecking}  
             name="email" 
             value={valueGet.email || ""} 
           />
-          <input 
+          <input className=" border border-box border-black text-center m-3 rounded-md"
             placeholder="Password" 
             type="password" 
             onChange={inputChecking}  
             name="password" 
             value={valueGet.password || ""} 
           />
-          <input className="submit" type="submit" value="Submit" />
+          <input className=" border border-box border-black text-center m-3 max-w-[90px] mx-[250px] rounded-md" type="submit" value="Submit" />
         </form>
       </div>
     </>
