@@ -28,10 +28,10 @@ const Slider = () => {
   return (
 
     <div
-      className="bg-cover h-[250px]"
+      className="bg-cover h-[300px]"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
         
-      <div className=" flex h-[250px] justify-between p-3 text-5xl font-bold align-middle">
+      <div className=" flex h-[300px] justify-between p-3 text-5xl font-bold align-middle">
         <button className="" onClick={prevSlide}>{"<"}</button>
 
         <button onClick={nextSlide}>{">"}</button>

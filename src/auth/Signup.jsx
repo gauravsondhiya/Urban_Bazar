@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Signup.css";
+// import "./Signup.css";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 
@@ -43,20 +43,19 @@ const Signup = () => {
       
   }
   return (
-    <>
-      <div className="signupbox">
-          
-             <form className="inputboxes" onSubmit={handlesubmit}>
-              <h3>SIGNUP</h3>
-              {warning && <p style={{ color: "red" }}>{warning}</p>}
-            <input placeholder="Name" onChange={values} type="text" name="name" />
-            <input placeholder="Email" onChange={values} type="email" name="email"/>
-            <input placeholder="Mobile Number" onChange={values} type="number" name="mobileno"/>
-            <input placeholder="Password" onChange={values} type="password" name="password"/>
-            <input className="submit" placeholder="SUBMIT"  type="Submit"/>
+    <> <div className=" h-[400px] flex  justify-center ">
+     
+              
+             <form className="flex flex-col border w-[40%]  border-box border-black text-2xl font-semibold rounded-md " onSubmit={handlesubmit}>
+             <h3 className="text-5xl text-center font-bold underline underline-offset">SIGNUP</h3>
+              {warning && <p className="text-center m-3" style={{ color: "red" }}>{warning}</p>}
+            <input className=" border border-box border-black text-center m-3 rounded-md" placeholder="Name" onChange={values} type="text" name="name" />
+            <input className=" border border-box border-black text-center m-3 rounded-md" placeholder="Email" onChange={values} type="email" name="email"/>
+            <input className=" border border-box border-black text-center m-3 rounded-md" placeholder="Mobile Number" onChange={values} type="number" name="mobileno"/>
+            <input className=" border border-box border-black text-center m-3 rounded-md" placeholder="Password" onChange={values} type="password" name="password"/>
+            <input className=" border border-box border-black text-center m-3 max-w-[90px] mx-[250px] rounded-md" placeholder="SUBMIT"  type="Submit"/>
            
              </form>
-          
 
         </div>
      
