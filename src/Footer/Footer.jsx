@@ -1,18 +1,18 @@
 import React from "react";
-import "./Footer.css";
+
 
 
 const Footer = () => {
   return (
     <>
       <hr />
-      <div className="footerfirstrow">
+      <div className="flex justify-around text-xl p-3">
         <div>
-          <h3>OFFLINE STORES</h3>
+          <h3 className="font-bold">OFFLINE STORES</h3>
           <p>Find Stores Near ME</p>
         </div>
         <div>
-          <h3>GET TO KNOW US</h3>
+          <h3 className="font-bold">GET TO KNOW US</h3>
           <ul>
             <li>Contact Us</li>
             <li>FAQ's</li>
@@ -21,7 +21,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3>TRACK OR RETURN/EXCHANGE ORDER</h3>
+          <h3 className="font-bold">TRACK OR RETURN/EXCHANGE ORDER</h3>
           <ul>
             <li>Track Order</li>
             <li>Place Return/Exchange Request</li>
@@ -29,7 +29,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3>CUSTOMER CARE</h3>
+          <h3 className="font-bold">CUSTOMER CARE</h3>
           <ul>
             <li>Timings:10AM-7PM(Mon-Sat)</li>
             <li>Whatsapp:+987654321</li>
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div>
+      <div className="text-center text-3xl  font-bold p-4 m-3">
         <h3>Made By GauravSondhiya 👋</h3>
       </div>
       <hr />

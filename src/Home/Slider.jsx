@@ -17,21 +17,28 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  // const nextSlide = () => {
-  //   setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  // };
+  const nextSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
-  // const prevSlide = () => {
-  //   setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  // };
+  const prevSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   return (
-    <div className="slider">
-      {/* <button onClick={prevSlide}>Previous</button> */}
-      <img src={images[currentImageIndex]} alt={`slide-${currentImageIndex}`} />
-      {/* <button onClick={nextSlide}>Next</button> */}
+
+    <div
+      className="bg-cover h-[250px]"
+      style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+        
+      <div className=" flex h-[250px] justify-between p-3 text-5xl font-bold align-middle">
+        <button className="" onClick={prevSlide}>{"<"}</button>
+
+        <button onClick={nextSlide}>{">"}</button>
+      </div>
     </div>
   );
 };
 
 export default Slider;
+
