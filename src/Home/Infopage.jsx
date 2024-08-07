@@ -3,7 +3,7 @@ import DataContext from "../Constdata/DataContext";
 import { useParams } from "react-router-dom";
 import Shimmer from "../Shimmer/Shimmer";
 import { useNavigate } from "react-router-dom";
-import "./Info.css";
+// import "./Info.css";
 import Home from "./Home";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../Cart/CartSlice";
@@ -31,56 +31,57 @@ const Infopage = () => {
   return dataget == "" ? (
     navigate("/")
   ) : (
-    <div className="maininfobox">
-      <div className="maininfobox1">
+    <div className="flex border border-box border-black">
+      <div className=" w-[50%] ">
         {valuefilter.map((e) => (
-          <img src={e.images} alt="logo" />
+          <img className="" src={e.images} alt="logo" />
         ))}
       </div>
-      <div className="maininfobox2">
+      <div className="">
         <div>
           {valuefilter.map((e) => (
             <>
-              <div key={e.id} className="information">
+              <div key={e.id} className="text-xl my-4 font-medium">
                 <div>
                   {" "}
-                  <h2>{e.title}</h2>
+                  <h2 className="text-3xl font-bold ">{e.title}</h2>
                 </div>
                 <div>
-                  <p>{e.description}</p>
+                  <p className="">{`Brand- ${e.brand}`}</p>
                 </div>
                 <div>
-                  {" "}
-                  <h4>{`Category : ${e.category}`}</h4>
+                  <h4 className="text-2xl font-bold">{`$ ${e.price}`}</h4>
                 </div>
                 <div>
-                  <h4>{`Price :$ ${e.price}`}</h4>
-                </div>
-                <div>
-                  <h4>{`Rating :${e.rating}`}</h4>
-                </div>
-                <div>
-                  <p>{`Stocks : ${e.stock}`}</p>
-                </div>
-                <div>
-                  <p>{`Brand ${e.brand}`}</p>
+                  <p className="">{e.description}</p>
                 </div>
                 <div>
                   {" "}
-                  <p>{`warrantyInformation :${e.warrantyInformation}`}</p>
+                  <h4 className="">{`Category : ${e.category}`}</h4>
+                </div>
+               
+                <div>
+                  <h4 className="">{`Rating ⭐:${e.rating}`}</h4>
                 </div>
                 <div>
-                  <button className="cartbutton" onClick={add (e)}>ADD TO CART</button>
+                  <p>{`Stocks: ${e.stock}`}</p>
                 </div>
-                        <h5>Reviews</h5>
+                
+                <div>
+                  {" "}
+                  <p>{`warrantyInformation: ${e.warrantyInformation}`}</p>
+                </div>
+                <div>
+                  <button className="border border-box border-black bg-red-400 p-3 font-bold rounded-lg my-2" onClick={add (e)}>ADD TO CART</button>
+                </div>
+                        <h5 className="text-2xl font-bold my-3 ">Reviews & Rating</h5>
                 <div>
                   {e.reviews.map((e, index) => (
                     <>
-                      <div key={index} className="comments">
-                        <div>{`User ${index + 1}| Name :${e.reviewerName}`}</div>
-                        <div>{`Email:${e.reviewerEmail}`}</div>
-
-                        <div>{`Rating :${e.rating}`}</div>
+                      <div key={index} className="text-xl my-3 ">
+                        <div className="font-semibold">{`User ${index + 1}| ${e.reviewerName}`}</div>
+                        <div>{`Email :${e.reviewerEmail}`}</div>
+                        <div>{`Rating⭐:${e.rating}`}</div>
                         <div>{`Comment:${e.comment}`}</div>
                         
                       </div>
