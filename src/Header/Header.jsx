@@ -27,29 +27,31 @@
 //       <div className="font-bold text-3xl " >
 //         <Link  to="/">Urban Bazaar</Link>
 //       </div>
-   
+
 //       <div className="flex gap-5 ">
 //         <input className="border border-black h-10 w-[450px] text-center rounded-md" placeholder="What are you looking for?" />
 //         <button className="border border-black h-9 w-[100px] rounded-lg">Search</button>
 //       </div>
 //       <div className="flex gap-10 underline underline-offset-2  m-2">
 //         <Link to="">Home</Link>
-//         <Link to="/Cart">{`Cart:${cartitem.length}`}</Link>
+//         
 //         <button  onClick={loginclickme}>{isAuth ? "Logout" : "Login"}</button>
 //         <button  onClick={sigupclickme}>Signup</button>
 //         {/* <Link to="/Signup">Signup</Link>
 //         //  <Link to="/Login">Login</Link>  */}
-        
+
 //       </div>
-     
+
 //     </div>
 //   );
 // };
 
 // export default Header;
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../auth/AuthContext";
+import { useSelector } from "react-redux";
 
-
-import React, { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,14 +59,32 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const { isAuth, logout } = useContext(AuthContext);
 
+  let navigate = useNavigate();
+
+  let loginclickme = () => {
+    if (isAuth) {
+      navigate("/Login")
+      logout()
+
+    } else {
+      navigate("/Login");
+    }
+  };
+
+  let sigupclickme = () => {
+    navigate("/Signup")
+  }
+  const cartitem = useSelector((store) => store.cart.items)
   return (
     <nav className=" border border-box border-black m-2 rounded-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Brand Name */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold">Urban Bazar</h1>
+
+            <Link className="text-2xl font-bold" to="/">Urban Bazaar</Link>
           </div>
 
           {/* Search Bar */}
@@ -79,18 +99,14 @@ const Header = () => {
 
           {/* Menu Items */}
           <div className="hidden md:flex space-x-4 ml-4">
-            <a href="#" className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium">
-              Home
-            </a>
-            <a href="#" className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium">
-              Cart
-            </a>
-            <a href="#" className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium">
-              Login
-            </a>
-            <a href="#" className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium">
-              Signup
-            </a>
+
+            <Link className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium" to="">Home</Link>
+
+            <Link className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium" to="/Cart">{`Cart:${cartitem.length}`}</Link>
+
+            <button className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium" onClick={loginclickme}>{isAuth ? "Logout" : "Login"}</button>
+            <button className="hover:bg-red-400 px-3 py-2 rounded-md text-xl font-medium" onClick={sigupclickme}>Signup</button>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,18 +132,13 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium">
-              Home
-            </a>
-            <a href="#" className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium">
-              Cart
-            </a>
-            <a href="#" className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium">
-              Login
-            </a>
-            <a href="#" className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium">
-              Signup
-            </a>
+
+            <Link className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium" to="">Home</Link>
+
+            <Link className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium" to="/Cart">{`Cart:${cartitem.length}`}</Link>
+
+            <button className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium" onClick={loginclickme}>{isAuth ? "Logout" : "Login"}</button>
+            <button className="block hover:bg-red-400 px-3 py-2 rounded-md text-base font-medium" onClick={sigupclickme}>Signup</button>
             <div className="px-3 py-2">
               <input
                 type="text"
