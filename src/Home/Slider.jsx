@@ -28,7 +28,7 @@ const Slider = () => {
   return (
 
     <div
-      className="bg-cover w-[600px] h-[250px] sm:w-[100%] sm:h-[300px]  bg-center "
+      className="bg-cover bg-center w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
         
       <div className=" flex h-[300px] justify-between p-3 text-5xl font-bold align-middle">
