@@ -11,7 +11,7 @@ import Thankyou from "./Cart/Thankyou";
 const App = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <br />
       <Routes>
         <Route path='' element={<Home />} />

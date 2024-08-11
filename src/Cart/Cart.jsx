@@ -34,8 +34,8 @@ const Cart = () => {
   };
 
   return (
-    <div className="cartmainbox">
-      <div className="cartbox1">
+    <div className="flex ">
+      <div className="w-[70%]">
         <div className="carta">
           <div>
             <h2>Your Cart</h2>

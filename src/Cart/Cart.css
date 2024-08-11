@@ -1,12 +1,4 @@
-.cartmainbox {
-  /* border: solid 2px black; */
-  display: flex;
-}
 
-.cartbox1 {
-  width: 70%;
-  /* border: solid 2px red; */
-}
 
 
 .carta {
@@ -17,9 +9,7 @@
   border: solid 2px rgb(175, 172, 172);
 }
 
-.cartboxb{
-    /* border: solid 2px yellow; */
-}
+
 
 .cartvalues {
   border: solid 1px rgb(182, 177, 177);

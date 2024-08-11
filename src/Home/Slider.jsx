@@ -13,7 +13,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -28,7 +28,7 @@ const Slider = () => {
   return (
 
     <div
-      className="bg-cover bg-center w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
+      className="bg-cover bg-center  h-[300px] sm:h-350px] md:h-[350px] lg:h-[350px]"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
         
       <div className=" flex h-[300px] justify-between p-3 text-5xl font-bold align-middle">
