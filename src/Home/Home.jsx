@@ -38,7 +38,7 @@ const Home = () => {
 
   return (dataget.length == "") ? <Shimmer /> : (
     <>
-      <Slider />
+      {/* <Slider /> */}
       <h3 className="text-left text-2xl m-3 font-bold ">Categories</h3>
       <div className="grid gap-2 max-sm:no-underline sm:grid-cols-5 sm:border border-black m-5 p-5 sm:justify-around text-2xl font-bold underline underline-offset-1">
         <button className="max-sm:border border-box border-black hover:bg-red-400 rounded-lg"  onClick={() => filterByCategory("all")}>All</button>
