@@ -33,9 +33,9 @@ const Cart = () => {
   };
 
   return (
-    <div className="grid grid-cols-12 ">
+    <div className="flex flex-col-reverse sm:grid sm:grid-cols-12 ">
       <div className="sm: col-span-9">
-        <div className="font-semibold flex justify-around border borer-box border-black p-3 text-2xl m-3 ">
+        <div className="font-semibold flex justify-around border borer-box border-black p-3 text-2xl m-3 rounded-lg ">
           <div className="">
             <h2>Your Cart</h2>
           </div>
@@ -45,24 +45,24 @@ const Cart = () => {
         </div>
         <div className="">
           {cart.map((e) => (
-            <div className="grid grid-cols-12  m-3  border  border-black text-3xl text-center " key={e.id}>
-              <div className="flex justify-center col-span-4">
+            <div className="grid grid-cols-12  m-3  border  border-black text-3xl text-center rounded-xl" key={e.id}>
+              <div className="flex justify-center col-span-3 sm:col-span-4">
                 <img className="h-[200px]" src={e.images[0]} alt="logo" />
               </div>
-              <div className=" col-span-4 m-auto">
+              <div className="col-span-3 sm:col-span-4 m-auto">
                 <p className="">{e.title}</p>
               </div>
-              <div className="col-span-2 m-auto">
+              <div className="col-span-3 sm:col-span-2 m-auto">
                 <h5>{`$ ${e.price}`}</h5>
               </div>
-              <div className="border  border-black col-span-2 m-auto rounded-lg w-[150px] hover:bg-red-400 ">
+              <div className="border border-black col-span-2 m-auto rounded-lg sm:w-[150px] hover:bg-red-400 ">
                 <button onClick={() => remove(e.id)}>Remove</button>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="border border-black sm:col-span-3 m-2 text-center text-3xl  leading-loose ">
+      <div className="border border-black sm:col-span-3 m-2 text-center text-3xl  leading-loose rounded-xl">
         <div><h3 className="font-bold underline underline-offset-2">Order Summary</h3></div>
         <div> <h3>{`Total Amount: $ ${Math.ceil(carttotal)}`}</h3></div>
         <div> <p>Shipping is Free for you</p> </div>
