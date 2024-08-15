@@ -43,7 +43,7 @@ const Cart = () => {
             <button className=" rounded-lg  m-auto w-[130px] h-[40px] border border-black hover:bg-red-400 " onClick={alldelete}>Clear Cart</button>
           </div>
         </div>
-        <div className="">
+    <div className="">
           {cart.map((e) => (
             <div className="grid gap-2 sm:grid-cols-12  m-3  border  border-black text-3xl text-center rounded-xl" key={e.id}>
               <div className="flex justify-center sm:col-span-4">
@@ -60,7 +60,7 @@ const Cart = () => {
               </div>
             </div>
           ))}
-        </div>
+    </div>
       </div>
       <div className="border border-black sm:col-span-3 m-2 text-center text-3xl  leading-loose rounded-xl">
         <div><h3 className="font-bold underline underline-offset-2">Order Summary</h3></div>

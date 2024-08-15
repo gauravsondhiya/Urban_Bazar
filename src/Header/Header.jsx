@@ -44,9 +44,9 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="border border-box border-black px-3 py-2 rounded-l-md w-full"
+              className="border border-box border-black px-3 py-2 rounded-l-md w-full "
             />
-            <button className="ml-2 border border-box border-black px-4 py-2 rounded-r-md hover:bg-red-400">Search</button>
+            <button className="font-bold ml-2 border border-box border-black px-4 py-2 rounded-r-md hover:bg-red-400">Search</button>
           </div>
 
           {/* Menu Items */}

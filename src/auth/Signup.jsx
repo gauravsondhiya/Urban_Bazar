@@ -77,7 +77,7 @@ const Signup = () => {
         <input className='border border-black text-center w-[290px] rounded-xl' type="text" placeholder="Email" />
         <input className='border border-black text-center w-[290px] rounded-xl' type="text" placeholder="Mobile Number" />
         <input className='border border-black text-center w-[290px] rounded-xl' type="text"  placeholder="Password"/>
-        <input className='border border-black text-center w-[290px] rounded-xl' type="Submit"  placeholder="Submit"/>
+        <input className='border border-black text-center w-[290px] rounded-xl font-bold' type="Submit"  placeholder="Submit"/>
        </form>
     </>
   )
