@@ -46,16 +46,16 @@ const Cart = () => {
         <div className="">
           {cart.map((e) => (
             <div className="grid grid-cols-12  m-3  border  border-black text-3xl text-center rounded-xl" key={e.id}>
-              <div className="flex justify-center col-span-3 sm:col-span-4">
+              <div className="flex justify-center col-span-2 sm:col-span-4">
                 <img className="h-[200px]" src={e.images[0]} alt="logo" />
               </div>
-              <div className="col-span-3 sm:col-span-4 m-auto">
+              <div className="col-span-2 sm:col-span-4 m-auto">
                 <p className="">{e.title}</p>
               </div>
               <div className="col-span-3 sm:col-span-2 m-auto">
                 <h5>{`$ ${e.price}`}</h5>
               </div>
-              <div className="border border-black col-span-2 m-auto rounded-lg sm:w-[150px] hover:bg-red-400 ">
+              <div className="border border-black sm:col-span-2 m-auto rounded-lg sm:w-[150px] hover:bg-red-400 ">
                 <button onClick={() => remove(e.id)}>Remove</button>
               </div>
             </div>
